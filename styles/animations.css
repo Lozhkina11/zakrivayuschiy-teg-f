@@ -12,3 +12,125 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes arrow {
+  0% {
+    transform: translateX(0) translateY(-50%);
+  }
+  100% {
+    transform: translateX(4px) translateY(-50%);
+  }
+}
+
+.contour {
+  fill: var(--contour-color);
+}
+
+.main-body,
+.core {
+  fill: none;
+}
+
+.sparks {
+  opacity: 0;
+  fill: var(--main-body);
+}
+
+.heart .core {
+  fill: var(--background-color);
+  transition: fill 0.3s linear 0.03s;
+  transform-origin: center;
+}
+
+.heart .main-body {
+  fill: var(--background-color);
+  transition: fill 0.3s linear 0.05s;
+  transform-origin: center;
+}
+
+.heart:hover .core {
+  fill: var(--contour-color);
+  transition: fill 0s linear 0.03s;
+}
+
+.heart:hover .main-body {
+  fill: var(--contour-color);
+  transition: fill 0.3s ease-out 0.05s;
+}
+
+.heart:active .core {
+  fill: var(--main-body);
+  transition: fill 0s linear 0.03s;
+}
+
+.heart:active .main-body {
+  fill: var(--main-body);
+  transition: fill 0.3s ease-out 0.05s;
+}
+
+.heart:active .contour {
+  fill: var(--main-body);
+  transition: fill 0.3s ease-out 0.06s;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+.heart:active {
+  animation: heartbeat 0.3s ease-in 0.1s 1 both;
+  transform-origin: center;
+}
+
+.heart.is-liked .core {
+  fill: var(--main-body);
+  /* transition: fill 0s linear 0.03s; */
+}
+
+.heart.is-liked .main-body {
+  fill: var(--main-body);
+  /* transition: fill 0.3s ease-out 0.05s; */
+}
+
+.heart.is-liked .contour {
+  fill: var(--main-body);
+  transition: fill 0.3s ease-out 0.06s;
+}
+
+.heart.is-liked .sparks {
+  opacity: 0;
+  fill: var(--main-body);
+  animation: sparksAnimation 0.3s ease-in-out 0.3s 1 both;
+}
+
+@keyframes sparksAnimation {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.heart:active .sparks {
+  animation: sparksAnimation 0.3s ease-in 0.3s 1 both;
+  fill: var(--main-body);
+}
+
+.like-icon.is-liked .main-body,
+.like-icon.is-liked .core,
+.like-icon.is-liked .contour{
+  fill: var(--main-body);
+}
+
+.heart:not(.is-liked) .contour {
+  /* fill: var(--contour-color); */
+  transition: fill 0.1s linear;
+}
