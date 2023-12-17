@@ -41,38 +41,7 @@
   font-weight: 400 700;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --accent-font: "Press Start 2P", monospace;
-    --main-font: "Inter", sans-serif;
-    --weight-text: 400;
-    --weight-title: 700;
-    --background-color: #fff;
-    --color-font: #000;
-    --font-size-for-decor: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-    --font-size-for-title: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-    --background-imag: repeating-linear-gradient(
-        to bottom,
-        #d3d3d3,
-        #d3d3d3 2px,
-        transparent 2px,
-        transparent 4px
-      ),
-      repeating-linear-gradient(
-        to right,
-        #d3d3d3,
-        #d3d3d3 2px,
-        transparent 2px,
-        transparent 4px
-      ),
-      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
-    --themes-main-color: #000;
-    --pic-text: #ffffff;
-    --contour-color:#000000;
-    --main-body: red;
-    --hover-color:#ffffff;
-  }
-}
+
 
 /* Стили для темной темы */
 :root.theme-dark {

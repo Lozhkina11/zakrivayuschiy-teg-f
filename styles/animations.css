@@ -126,7 +126,7 @@
 
 .like-icon.is-liked .main-body,
 .like-icon.is-liked .core,
-.like-icon.is-liked .contour{
+.like-icon.is-liked .contour {
   fill: var(--main-body);
 }
 

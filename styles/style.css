@@ -152,7 +152,6 @@
   animation: arrow 0.5s ease-in-out infinite alternate;
 }
 
-
 .theme-menu__button:active {
   opacity: 0.6;
 }
@@ -282,17 +281,15 @@
 }
 
 .card__icon-button {
-
-    width: 47px;
-    height: 38px;
-    border: none;
-    margin-right: 13px;
-    background-color: inherit;
-    position: relative;
-    cursor: pointer;
-    padding: 0;
+  width: 47px;
+  height: 38px;
+  border: none;
+  margin-right: 13px;
+  background-color: inherit;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
 }
-
 
 .card__icon-button:hover {
   background-position: -46px -23px;
@@ -305,7 +302,6 @@
 .card__icon-button:focus-visible {
   border: 2px solid var(--color-font);
 }
-
 
 /* -----------кнопка в карточке------------ */
 .card__like-button {
@@ -331,7 +327,6 @@
   box-shadow: 2px 2px 0px 0px var(--color-font);
   transition: box-shadow 0.3s ease;
 }
-
 
 .button__text::before {
   content: "";
@@ -387,36 +382,41 @@
 
 /* ----------------------- */
 .modal {
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-  width: 100%;
-  height: 100vw;
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 0;
-  transition: opacity 0.3s ease-in-out;
+  max-width: 357px;
+  padding: 32px;
+  border: 2px solid var(--themes-main-color);
+  background-color: var(--pic-text);
+  color: var(--themes-main-color);
 }
-/* .modal {
-  display: none;
 
- /* .modal:open {
-  display: flex;
-  width: 100%;
-  height: 100vw; 
-}  */
-
-
+.modal::backdrop {
+  background-color: #000;
+  opacity: 0.6;
+}
 
 .modal__box {
-  background-color: var(--background-color);
-  color: var(--color-font);
   display: flex;
-  height: 194px;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  text-align: center;
-  padding: 32px 42px;
-  border: 2px solid var(--color-font);
+  gap: 20px;
+}
+
+.modal__button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.modal__button {
+  padding: 9px 17px;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+  /* background-color: inherit; */
+  border: 2px solid var(--themes-main-color);
+  background: var(--themes-background);
+  cursor: pointer;
 }
 
 .modal__content {
@@ -424,13 +424,8 @@
   align-items: center;
 }
 
-.modal__content .icon-sm {
+.modal__box .icon-sm {
   margin-right: 20px;
-}
-
-.modal__button_box {
-  margin-top: 30px;
-  width: 100%;
 }
 
 .modal__icon {
@@ -449,14 +444,3 @@
   width: 234px;
   text-align: left;
 }
-
-.modal__button.card__like-button {
-  width: 100%;
-  cursor: pointer;
-  
-}
-
-dialog:not([open]) {
-  pointer-events: none;
-  opacity: 0;
-} 
