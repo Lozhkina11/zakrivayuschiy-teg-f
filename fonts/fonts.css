@@ -6,9 +6,12 @@
   font-style: normal;
 }
 
+
 @font-face {
   font-family: 'Inter';
-  font-weight: 400 700 465 785;
+  font-weight: 400 785;
   font-style: normal;
-  src: url(./Inter-Variable.woff2) format('woff2 supports variations, woff2-variations');
+  src: url(./Inter-Variable.woff2) format('woff2'),
+       url(./Inter-Variable.woff) format('woff');
 }
+

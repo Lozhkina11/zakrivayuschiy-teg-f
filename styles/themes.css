@@ -36,10 +36,6 @@
   --main-body: red;
   --hover-color:#ffffff;
 }
-.page.light-theme {
-  font-family: "Inter", sans-serif;
-  font-weight: 400 700;
-}
 
 
 
@@ -75,10 +71,7 @@
   --hover-color:#00CC14;
 }
 
-.page.dark-theme {
-  font-family: "Inter", sans-serif;
-  font-weight: 465 785;
-}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --accent-font: "Press Start 2P", monospace;
