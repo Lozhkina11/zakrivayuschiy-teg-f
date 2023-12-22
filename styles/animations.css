@@ -75,21 +75,7 @@
   transition: fill 0.3s ease-out 0.06s;
 } */
 
-@keyframes heartbeat {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 
-.like-icon.is-liked {
-  animation: heartbeat 0.3s ease-in 0.1s 1 both alternate none;
-}
 
 .like-icon.is-liked .core {
   /* fill: var(--main-body); */
@@ -124,6 +110,21 @@
   animation: sparksAnimation 0.3s ease-in 0.3s 1 none alternate;
 }
 
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.like-icon.is-liked {
+  animation: heartbeat 0.3s ease-in 0.1s 1  none alternate ;
+}
 /* .heart:active .sparks {
   animation: sparksAnimation 0.3s ease-in 0.3s 1 both;
   fill: var(--main-body);

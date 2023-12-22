@@ -34,7 +34,8 @@
   --pic-text: #ffffff;
   --contour-color:#000000;
   --main-body: red;
-  --hover-color:#ffffff;
+  --hover-color:#000;
+  --color-hover-text: #FFF;
 }
 
 
@@ -69,6 +70,7 @@
   --contour-color:#00CC14;
   --main-body: red;
   --hover-color:#00CC14;
+  --color-hover-text: #00CC14;
 }
 
 
@@ -102,6 +104,7 @@
     --contour-color:#00CC14;
     --main-body: red;
     --hover-color:#00CC14;
+    --color-hover-text: #00CC14;
   }
 }
 
